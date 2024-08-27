@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="popup.png" type="image/x-icon" />
+
+    <title>Guarder</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <style>
+      /* Basic Reset */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      ul,
+      li,
+      a,
+      img,
+      button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      /* Global Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+      }
+
+      .slide-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .slide-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .header_section {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero_bg_box {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .hero_bg_box .img-box img {
+        width: 100%;
+        height: auto;
+      }
+
+      .header_top {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+
+      .header_top .contact_link-container a {
+        color: #fff;
+        margin-right: 20px;
+      }
+
+      .header_bottom {
+        background: #fff;
+        padding: 10px 0;
+      }
+
+      .custom_nav-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-brand span {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .team_section {
+        padding: 50px 0;
+      }
+
+      .team_section .heading_container {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .team_section .heading_container h2 {
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .team_section .heading_container p {
+        font-size: 16px;
+        color: #666;
+      }
+
+      .team_section .box {
+        background: #f9f9f9;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .team_section .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .team_section .img-box img {
+        width: 100%;
+        height: auto;
+      }
+
+      .team_section .detail-box {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .team_section .detail-box h5 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .team_section .detail-box h6 {
+        font-size: 16px;
+        color: #666;
+      }
+
+      .info_section {
+        padding: 50px 0;
+        background: #f9f9f9;
+      }
+
+      .info_section .info_logo a {
+        font-size: 24px;
+        font-weight: 700;
+        color: #333;
+      }
+
+      .info_section .info_info,
+      .info_section .info_contact {
+        margin-bottom: 20px;
+      }
+
+      .info_section .info_info h5,
+      .info_section .info_contact h5 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .info_section .info_contact a {
+        display: block;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .info_section .social_box a {
+        color: #333;
+        margin-right: 10px;
+        font-size: 20px;
+      }
+
+      .info_section .info_form form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .info_section .info_form input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .info_section .info_form button {
+        padding: 10px;
+        border: none;
+        background: #333;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .footer_section {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .footer_section.visible {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body class="sub_page">
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_link-container">
+            <a href="" class="contact_link1">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                1234 Main Street, Anytown, USA
+              </span>
+            </a>
+            <a href="" class="contact_link2">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call: +01 123-456-7890
+              </span>
+            </a>
+            <a href="" class="contact_link3">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email: info@OnyXguard.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                OnyXguard
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html"> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="guard.html"> Our Team </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+  
+      <!-- end header section -->
+    </div>
+
+    <!-- team section -->
+    <section class="team_section layout_padding slide-up">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Our Guards</h2>
+          <p>
+            Our team of highly trained professionals is dedicated to providing top-notch security services. Each of our guards is equipped with the skills and knowledge necessary to ensure your safety in any situation.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img src="t1.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>Martin Anderson</h5>
+                <h6>Supervisor</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img src="t2.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>Denny Butler</h5>
+                <h6>Supervisor</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <img src="t3.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>Nathan Mcpherson</h5>
+                <h6>Supervisor</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <a href=""> View All </a>
+        </div>
+      </div>
+    </section>
+    <!-- end team section -->
+
+    <!-- info section -->
+<!-- info section -->
+<section class="info_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>OnyXguard</h4>
+        <p>
+          OnyXguard is committed to ensuring the safety and security of our clients through reliable and professional services.
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>Contact Us</h4>
+        <p>1234 Main Street, Anytown, USA</p>
+        <p>Call: +01 123-456-7890</p>
+        <p>Email: info@OnyXguard.com</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Newsletter</h4>
+        <form action="#">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end info_section -->
+
+    <!-- end info_section -->
+
+    <!-- footer section -->
+    <footer class="container-fluid footer_section fade-in">
+      <p>
+        &copy; <span id="currentYear"></span> OnyXguard. Committed to Your Safety and Security.
+      </p>
+    </footer>
+    <!-- end footer section -->
+
+    <!-- Scripts -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Add the 'visible' class to fade-in and slide-up elements
+        document
+          .querySelectorAll(".fade-in")
+          .forEach((el) => el.classList.add("visible"));
+        document
+          .querySelectorAll(".slide-up")
+          .forEach((el) => el.classList.add("visible"));
+
+        // Update the current year in the footer
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+      });
+
+      window.addEventListener("scroll", () => {
+        // Add the 'visible' class to slide-up elements when they are scrolled into view
+        document.querySelectorAll(".slide-up").forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            el.classList.add("visible");
+          }
+        });
+      });
+    </script>
+
+    <!-- Optional: Include Bootstrap and jQuery libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
